@@ -4,3 +4,4 @@ CMC files are taken from the historical data on coinmarketcap.com, for the last 
 
 Daily price change is defined as the opening - closing price from CMC data, also expressed as a percentage of the opening price.
 
+![Daily price change](daily-pricechange-2years.png)
