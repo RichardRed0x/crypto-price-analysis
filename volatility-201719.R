@@ -1,5 +1,8 @@
 
 
+library(ggplot2)
+
+
 Decred = read.csv("CMC-Decred-201719.csv", stringsAsFactors = FALSE)
 Decred$project = "Decred"
 
@@ -48,7 +51,8 @@ df$date = as.POSIXlt(df$Date, format = "%b %d, %Y")
 #graph daychange_per as line, facet wrap by project, fixed Y axes
 p.daily.volatility = ggplot(df, aes(x = date, y = daychange_per))+
   geom_line()+
-  facet_wrap(~project, ncol = 1)
+  facet_wrap(~project, ncol = 1)+
+  ylab("Percent change in price on day")
 
 ggsave("daily-pricechange-2years.png", height = 12, width = 5)
 
